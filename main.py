@@ -74,7 +74,6 @@ class Video(Resource):
 
         return result
 
-    @marshal_with(resource_fields)
     def delete(self, video_id):
         result = VideoModel.query.filter_by(id=video_id).first()
         if not result:
